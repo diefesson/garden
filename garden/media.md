@@ -1,6 +1,6 @@
 # Media
 
-Here is a list of some open source software for enjoying and managing a local media library
+A list of free and open source software for enjoying and managing a local media library.
 
 ## [VLC](https://www.videolan.org)
 
