@@ -1,4 +1,4 @@
-# Media
+# Your Local Media Library
 
 A list of free and open source software for enjoying and managing a local media library.
 

@@ -4,4 +4,5 @@ Here is my attempt at creating a digital garden to organize my ideas and knowled
 
 Some starting points:
 
-[Media](./garden/media.md)
+- [Your Local Media Library](./garden/your-local-media-library.md)
+- [Think About](./garden/think-about.md)
