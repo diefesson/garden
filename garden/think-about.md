@@ -8,3 +8,4 @@ Some interesting things. Still unorganized.
 - [Vanity, Vendors, and Vulnerabilities](https://soatok.blog/2020/10/08/vanity-vendors-and-vulnerabilities/)
 - [Every Frame Perfect](https://tonsky.me/blog/every-frame-perfect/)
 - [The past, present, and future of local-first - Martin Kleppmann (Local-First Conf)](https://www.youtube.com/watch?v=NMq0vncHJvU)
+- [Your Brain on ChatGPT](https://arxiv.org/pdf/2506.08872)
