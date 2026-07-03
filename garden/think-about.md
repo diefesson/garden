@@ -9,3 +9,4 @@ Some interesting things. Still unorganized.
 - [Every Frame Perfect](https://tonsky.me/blog/every-frame-perfect/)
 - [The past, present, and future of local-first - Martin Kleppmann (Local-First Conf)](https://www.youtube.com/watch?v=NMq0vncHJvU)
 - [Your Brain on ChatGPT](https://arxiv.org/pdf/2506.08872)
+- [Github is Sinking](https://dbushell.com/2026/04/29/github-is-sinking/)
