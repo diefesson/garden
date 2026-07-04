@@ -10,3 +10,4 @@ Some interesting things. Still unorganized.
 - [The past, present, and future of local-first - Martin Kleppmann (Local-First Conf)](https://www.youtube.com/watch?v=NMq0vncHJvU)
 - [Your Brain on ChatGPT](https://arxiv.org/pdf/2506.08872)
 - [Github is Sinking](https://dbushell.com/2026/04/29/github-is-sinking/)
+- [iCloud: Who holds the key?](https://blog.cryptographyengineering.com/2012/04/05/icloud-who-holds-key/)
