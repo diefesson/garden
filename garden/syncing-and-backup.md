@@ -59,7 +59,7 @@ When doing operations like `move` or `sync` Rclone checks modification time and 
 |              | `--transfers count`                 | Number of file transfers to run in parallel (default 4)                                     |
 |              | `--max-depth depth`                 | If set limits the recursion depth to this (default -1)                                      |
 
-# Restic
+# [Restic](https://restic.net/)
 
 Restic is a modern backup tool with support for many storage types such as local, self-hosted, SFTP, S3 and Rclone. It uses chunk based deduplication to efficiently store data and reduce transfers.
 
