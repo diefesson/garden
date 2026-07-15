@@ -14,3 +14,4 @@ Some interesting things. Still unorganized.
 - [If you’re a button, you have one job](https://unsung.aresluna.org/if-youre-a-button-you-have-one-job/) (Marcin Wichary, 2026)
 - [Show your hands honor for the strange power they bring you](https://aresluna.org/show-your-hands-honor/) (Marcin Wichary, 2026)
 - [Why don't people use git properly?](https://deadsimpletech.com/blog/why-dont-people-use-git-properly) (Iris Meredith, 2026)
+- [Good Tools Are Invisible](https://www.gingerbill.org/article/2026/07/10/good-tools-are-invisible/) (Ginger Bill, 2026)
