@@ -6,7 +6,7 @@ Some interesting things. Still unorganized.
 - [Are You Under the Influence? The Tail That Wags The Dog](https://soatok.blog/2025/09/16/are-you-under-the-influence-the-tail-that-wags-the-dog/) (Soatok, 2025)
 - [This Would Be More Professionally Useful If Not For the Furry Art](https://soatok.blog/2023/11/17/this-would-be-more-professionally-useful-if-not-for-the-furry-art/) (Soatok, 2023)
 - [Vanity, Vendors, and Vulnerabilities](https://soatok.blog/2020/10/08/vanity-vendors-and-vulnerabilities/) (Soatok, 2020)
-- [Every Frame Perfect](https://tonsky.me/blog/every-frame-perfect/) (tonksy.me, 2026)
+- [Every Frame Perfect](https://tonsky.me/blog/every-frame-perfect/) (Nikita Prokopov, 2026)
 - [The past, present, and future of local-first - Martin Kleppmann (Local-First Conf)](https://www.youtube.com/watch?v=NMq0vncHJvU) (Martin Kleppmann, 2024)
 - [Your Brain on ChatGPT](https://arxiv.org/abs/2506.08872v2) (Nataliya Kosmyna, 2025)
 - [Github is Sinking](https://dbushell.com/2026/04/29/github-is-sinking/) (David Bushell, 2026)
