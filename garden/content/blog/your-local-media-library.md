@@ -1,6 +1,9 @@
-# Your Local Media Library
-
-A list of free and open source software for enjoying and managing a local media library.
++++
+title = "Your Local Media Library"
+description = "A list of free and open source software for enjoying and managing a local media library."
+date = 2026-06-22
+updated = 2026-06-26
++++
 
 ## [VLC](https://www.videolan.org)
 
