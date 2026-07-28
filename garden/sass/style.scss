@@ -1,0 +1,171 @@
+// Fira Sans
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// Fira Code
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$font-sans: "Fira Sans", sans-serif;
+$font-monospace: "Fira Code", monospace;
+
+$active-color: #ffae00;
+$active-color-hover: #ffe100;
+$text-color: #ffffff;
+$text-color-faded: #cccccc;
+$background-color: #231919;
+
+$navigation-color: #ffffff;
+
+$content-text-color: $text-color;
+$content-link-color: $active-color-hover;
+
+html {
+    font-size: 62.5%;
+    font-family: $font-sans;
+    color: $text-color;
+    background-color: $background-color;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.8rem;
+}
+
+.site {
+    display: grid;
+    grid-template-columns: auto min(700px, 100vw) auto;
+}
+
+.navigation {
+    grid-column: 2 / span 1;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: baseline;
+    border-top: 2px solid $navigation-color;
+    border-bottom: 2px solid $navigation-color;
+    padding: 4px;
+    margin-bottom: 32px;
+}
+
+.navigation span {
+    padding-right: 8px;
+    font-size: 2.4rem;
+}
+
+.navigation .navigation-title {
+    font-size: 2.8rem;
+    padding-right: 12px;
+    font-weight: 500;
+}
+
+.navigation a:link {
+    color: $active-color;
+    text-decoration: none;
+}
+
+.navigation a:visited {
+    color: $navigation-color;
+}
+
+.navigation a:hover {
+    color: $active-color-hover;
+}
+
+.content {
+    grid-column: 2 / span 1;
+    padding: 24px;
+}
+
+.content header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 24px 0 24px;
+    margin-bottom: 32px;
+}
+
+.content header h1 {
+    text-align: center;
+    margin: 0px 0 8px 0;
+    font-size: 4rem;
+}
+
+.content header p {
+    margin: 0 0 8px 0;
+    text-align: center;
+    color: $text-color-faded
+}
+
+.content header div {
+    color: $text-color-faded;
+}
+
+.content header div span {
+    white-space: nowrap;
+}
+
+.content a {
+    color: $active-color;
+    text-decoration: none;
+}
+
+.content a:hover {
+    color: $active-color-hover;
+}
+
+.content code {
+    color: $text-color-faded;
+    font-family: $font-monospace;
+}
+
+.content .giallo {
+    overflow-x: auto;
+    padding: 0.8em;
+    border-radius: 0.8em;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+    font-size: 1.6rem;
+}
+
+.content thead {
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.content thead tr th {
+    padding: 4px 4px 4px 4px;
+}
+
+.content tbody tr td {
+    padding: 4px 4px 4px 4px;
+    vertical-align: top;
+}
+
+.footer {
+    grid-column: 2 / span 1;
+    border-top: 2px solid #ffffff;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    padding: 12px;
+}
+
+.footer span {
+    border-radius: 4px;
+}
+
+.footer a {
+    color: $active-color;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: $active-color-hover
+}

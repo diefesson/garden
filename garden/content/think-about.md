@@ -1,6 +1,8 @@
-# Think About
-
-Some interesting things. Still unorganized.
++++
+title = "Think About"
+description = "Some interesting things. Still unorganized."
+authors = ["Diefesson"]
++++
 
 - [The Revolution Will Not Make the Hacker News Front Page](https://soatok.blog/2025/12/17/the-revolution-will-not-make-the-hacker-news-front-page/) (Soatok, 2025)
 - [Are You Under the Influence? The Tail That Wags The Dog](https://soatok.blog/2025/09/16/are-you-under-the-influence-the-tail-that-wags-the-dog/) (Soatok, 2025)

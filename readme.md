@@ -1,9 +1,0 @@
-# Diefesson's Digital Garden
-
-Here is my attempt at creating a digital garden to organize my ideas and knowledge. I am not really sure what to write, english isn't my main language and I don't claim to be a expert in any area, so some mistakes are to be expected, but I still hope it turns out to be useful for me and for those searching for knowledge.
-
-Some starting points:
-
-- [Your Local Media Library](./garden/your-local-media-library.md)
-- [Syncing and Backup](./garden/syncing-and-backup.md)
-- [Think About](./garden/think-about.md)
