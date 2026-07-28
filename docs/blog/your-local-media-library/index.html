@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://diefesson.github.io/garden/style.css" />
+  <title>Diefesson's Digital Garden</title>
+</head>
+
+<body>
+  <div class="site">
+    <nav class="navigation" id="navigation">
+      <span class="navigation-title"><a href="https://diefesson.github.io/garden">The Garden</a></span>
+      <span><a href="https://diefesson.github.io/garden/blog/">Blog</a></span>
+      <span><a href="https://diefesson.github.io/garden/think-about/">Think About</a></span>
+    </nav>
+    <main class="content">
+      
+<header>
+  <h1>Your Local Media Library</h1>
+  <p>A list of free and open source software for enjoying and managing a local media library.</p>
+  <div>
+    
+    <span>🦊 Diefesson</span>
+    
+    
+    <span>📅 2026-06-22</span>
+    
+  </div>
+</header>
+<h2 id="vlc"><a rel="external" href="https://www.videolan.org">VLC</a></h2>
+<p>VLC Media Player, previously know as VideoLAN Client, is a versatile media player powered by FFmpeg. It can play a wide range of video and audio formats, also supporting subtitles, playlists, network media streams and discovery of network media servers (including UPnP/DLNA). The VLsub extension can be used to fetch movie and series subtitles. I have personally used it on Linux, Windows and Android, and so far it was capable of opening anything I throw at it.</p>
+<h2 id="tauon"><a rel="external" href="https://tauonmusicbox.rocks">Tauon</a></h2>
+<p>Tauon is a playlist oriented music player with fast indexing. It features normal/synced lyrics, integration with scrobblers (eg: last.fm), streaming (eg: Jellyfin, other Tauon instances), network radios, generated playlists, and a widget-like player.</p>
+<p>It's UI layout is truly something else. Different from most alternatives it hasn't a central UI showing all musics, but a similar experience can be achieved by simply dragging your folders to the default playlist and managing from there. While the queue provides a way to control the flow by jumping to specific entries, even between playlists.</p>
+<h2 id="musicbrainz-picard"><a rel="external" href="https://picard.musicbrainz.org">MusicBrainz Picard</a></h2>
+<p>A music tagger powered by <a rel="external" href="https://musicbrainz.org">MusicBrainz</a> and <a rel="external" href="https://acoustid.org">AcousticID</a> databases. It can identify a music by acousticID and tags. Features include tag completion, file renaming, and fetching album cover. Additionally you can use Lrclib Lyrics plugin to fetch lyrics from <a rel="external" href="https://lrclib.net">LRCLIB</a> during music identification.</p>
+<h2 id="ffmpeg"><a rel="external" href="https://ffmpeg.org">FFmpeg</a></h2>
+<p>FFmpeg is a collection of libraries and CLI tools to manipulate, inspect and play media with support for a wide variety of formats. It's commands are the following:</p>
+<ul>
+<li><code>ffmpeg</code>: Apply media manipulation such as transcoding and remuxing; combining and splitting streams; and applying effects. For advanced use cases it offers a graph like language to define complex pipelines. It also accepts input/output from default streams.</li>
+<li><code>ffprobe</code>: Shows media metadata, such as container, streams, codecs, and so on.</li>
+<li><code>ffplay</code>: A barebones media player without UI. It's very useful for peeking at a file content.</li>
+</ul>
+<p>Example of converting an audio file:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">ffmpeg</span><span style="color: #A6E3A1;"> -i music.flac -b:a</span><span style="color: #FAB387;"> 192</span><span style="color: #A6E3A1;"> music.mp3</span></span></code></pre><h2 id="exiftool"><a rel="external" href="https://exiftool.org">ExifTool</a></h2>
+<p>A CLI tool for visualizing and editing file metadata with support for a lot of formats.</p>
+<p>Usage examples:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #9399B2;font-style: italic;"># Listing a music metadata</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">exiftool</span><span style="color: #A6E3A1;"> music.opus</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;"># Group listed metadata</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">exiftool</span><span style="color: #A6E3A1;"> -g music.opus</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;"># Extracting a specific metadata</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">exiftool</span><span style="color: #A6E3A1;"> -title music.opus</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;"># Extracting from a specific group</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">exiftool</span><span style="color: #A6E3A1;"> -opus:title music.opus</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;"># Extracting binary data</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">exiftool</span><span style="color: #A6E3A1;"> -b -picture music.opus</span><span style="color: #94E2D5;"> &gt;</span><span style="color: #A6E3A1;"> picture.jpg</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;"># Changing file name based on metadata</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">exiftool</span><span style="color: #A6E3A1;"> &#39;-filename&lt;%artist - $title.%le&#39; music.opus</span></span></code></pre>
+
+    </main>
+    <footer class="footer">
+      <span><a href="#navigation">To the top</a></span>
+    </footer>
+  </div>
+</body>
+
+</html>

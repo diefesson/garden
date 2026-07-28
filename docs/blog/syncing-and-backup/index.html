@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://diefesson.github.io/garden/style.css" />
+  <title>Diefesson's Digital Garden</title>
+</head>
+
+<body>
+  <div class="site">
+    <nav class="navigation" id="navigation">
+      <span class="navigation-title"><a href="https://diefesson.github.io/garden">The Garden</a></span>
+      <span><a href="https://diefesson.github.io/garden/blog/">Blog</a></span>
+      <span><a href="https://diefesson.github.io/garden/think-about/">Think About</a></span>
+    </nav>
+    <main class="content">
+      
+<header>
+  <h1>Syncing and Backup</h1>
+  <p>Free and Open Source file synchronization and backup tools.</p>
+  <div>
+    
+    <span>🦊 Diefesson</span>
+    
+    
+    <span>📅 2026-07-15</span>
+    
+  </div>
+</header>
+<h1 id="rclone"><a rel="external" href="https://rclone.org">Rclone</a></h1>
+<blockquote>
+<p>The Swiss army knife of cloud storage</p>
+</blockquote>
+<p>Rclone is a tool to manage files in cloud storage with backends for more than 70 providers and protocols, including Google Drive, Mega, SFTP, WebDAV and S3. It has equivalent to popular commands like <code>ls</code>, <code>cp</code>, <code>mv</code>, <code>rm</code>, <code>tree</code> and <code>ncdu</code>. It's features also include mounting, serving (eg: SFTP, DLNA, HTTP) and virtual backends (eg: crypt, compress, union).</p>
+<p>Use <code>rclone config</code> to start a interactive session to setup remotes and optionally set a config password. Rclone accepts paths in the form <code>remote:path</code> where <code>remote</code> is the name of a configured remote. When <code>remote:</code> is omitted Rclone will use the local filesystem.</p>
+<p>When doing operations like <code>move</code> or <code>sync</code> Rclone checks modification time and hashes whenever supported to avoid unnecessary operations. When doing significant changes it's a good practice to use <code>-n</code> (<code>--dry-run</code>) to do a trial run and verify operations, furthermore <code>-i</code> (<code>--interactive</code>) allows the user to interactively approve or skip each operation. <code>-P</code> (<code>--progress</code>) shows the progress for the overall process and sub operations.</p>
+<h2 id="help-commands">Help commands</h2>
+<table><thead><tr><th>Command</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>rclone help</code> or <code>rclone --help</code></td><td>Lists all commands</td></tr>
+<tr><td><code>rclone help flags</code></td><td>Lists all flags. It has a very long text</td></tr>
+<tr><td><code>rclone help backends</code></td><td>Lists all backends</td></tr>
+<tr><td><code>rclone &lt;command&gt; --help</code></td><td>Get help for a specific command</td></tr>
+</tbody></table>
+<h2 id="common-commands">Common commands</h2>
+<table><thead><tr><th>Command</th><th>Description</th><th>Example</th></tr></thead><tbody>
+<tr><td><code>about</code></td><td>Get quota information from the remote</td><td><code>rclone about remote:path</code></td></tr>
+<tr><td><code>cat</code></td><td>Concatenates any files and sends them to stdout</td><td><code>rclone cat remote:path</code></td></tr>
+<tr><td><code>check</code></td><td>Checks the files in the source and destination match</td><td><code>rclone check remote:path remote:path</code></td></tr>
+<tr><td><code>checksum</code></td><td>Checks the files in the destination against a SUM file</td><td><code>rclone checksum sha1 remote:path checksum_file</code></td></tr>
+<tr><td><code>config</code></td><td>Enter an interactive configuration session.</td><td><code>rclone config</code></td></tr>
+<tr><td><code>copy</code></td><td>Copy files from source to dest, skipping identical files</td><td><code>rclone copy remote:path remote:path</code></td></tr>
+<tr><td><code>copyto</code></td><td>Copy files from source to dest, skipping identical files</td><td><code>rclone copyto remote:path remote:path</code></td></tr>
+<tr><td><code>dedupe</code></td><td>Interactively find duplicate filenames and delete/rename them</td><td><code>rclone dedupe  remote:path</code></td></tr>
+<tr><td><code>delete</code></td><td>Remove the files in path</td><td><code>rclone delete remote:path</code></td></tr>
+<tr><td><code>deletefile</code></td><td>Remove a single file from remote</td><td><code>rclone deletefile remote:path</code></td></tr>
+<tr><td><code>hashsum</code></td><td>Produces a hashsum file for all the objects in the path</td><td><code>rclone hashsum sha1 remote:path</code></td></tr>
+<tr><td><code>help</code></td><td>Show help for rclone commands, flags and backends</td><td><code>rclone help</code></td></tr>
+<tr><td><code>lsf</code></td><td>List directories and objects in remote:path formatted for parsing</td><td><code>rclone lsf remote:path</code></td></tr>
+<tr><td><code>mkdir</code></td><td>Make the path if it doesn't already exist</td><td><code>rclone mkdir remote:path</code></td></tr>
+<tr><td><code>mount</code></td><td>Mount the remote as file system on a mountpoint</td><td><code>rclone mount remote:path local_path</code></td></tr>
+<tr><td><code>move</code></td><td>Move files from source to dest</td><td><code>rclone move remote:path remote:path</code></td></tr>
+<tr><td><code>moveto</code></td><td>Move file or directory from source to dest</td><td><code>rclone moveto remote:path remote:path</code></td></tr>
+<tr><td><code>ncdu</code></td><td>Explore a remote with a text based user interface</td><td><code>rclone ncdu remote:path</code></td></tr>
+<tr><td><code>rmdir</code></td><td>Remove the empty directory at path</td><td><code>rclone rmdir remote:path</code></td></tr>
+<tr><td><code>serve</code></td><td>Serve a remote over a protocol</td><td><code>rclone serve dlna remote:path</code></td></tr>
+<tr><td><code>sync</code></td><td>Make source and dest identical, modifying destination only</td><td><code>rclone sync remote:path remote:path</code></td></tr>
+<tr><td><code>touch</code></td><td>Create new file or change file modification time</td><td><code>rclone touch remote:path</code></td></tr>
+<tr><td><code>tree</code></td><td>List the contents of the remote in a tree like fashion</td><td><code>rclone tree remote:path</code></td></tr>
+</tbody></table>
+<h2 id="common-flags">Common flags</h2>
+<table><thead><tr><th>Short option</th><th>Long option</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>-n</code></td><td><code>--dry-run</code></td><td>Do a trial run with no permanent changes</td></tr>
+<tr><td><code>-i</code></td><td><code>--interactive</code></td><td>Enable interactive mode</td></tr>
+<tr><td><code>-P</code></td><td><code>--progress</code></td><td>Show progress during transfer</td></tr>
+<tr><td></td><td><code>--track-renames</code></td><td>When synchronizing, track file renames and do a server-side move if possible</td></tr>
+<tr><td></td><td><code>--track-renames-strategy strategy</code></td><td>Strategies to use when synchronizing using track-renames hash/modtime/leaf (default "hash")</td></tr>
+<tr><td></td><td><code>--transfers count</code></td><td>Number of file transfers to run in parallel (default 4)</td></tr>
+<tr><td></td><td><code>--max-depth depth</code></td><td>If set limits the recursion depth to this (default -1)</td></tr>
+</tbody></table>
+<h1 id="restic"><a rel="external" href="https://restic.net/">Restic</a></h1>
+<p>Restic is a modern backup tool with support for many storage types such as local, self-hosted, SFTP, S3 and Rclone. It uses chunk based deduplication to efficiently store data and reduce transfers.</p>
+<p>To create a new repository use <code>restic init -r repo_path</code>, you will be prompted for a password (<strong>losing it means you will be able to recover your data</strong>). If you have Rclone configured you can use <code>rclone:remote:path</code> access a repository inside a Rclone remote.</p>
+<p>Before creating or restoring complex snapshots, it's a good practice to use <code>-n</code> (<code>--dry-run</code>) to verify the changes. When creating backups or selecting them, the <code>--tag</code> option can be used to, respectively, add tags to the new snapshot or filter by tag. <code>latest</code> can be used to represent the latest matching snapshot, for example <code>restic ls --tag abc latest</code> will list all files inside the latest snapshot tagged with "abc".</p>
+<h2 id="help-commands-1">Help commands</h2>
+<table><thead><tr><th>Command</th><th>Example</th></tr></thead><tbody>
+<tr><td><code>restic help</code> or <code>restic --help</code></td><td>List all commands</td></tr>
+<tr><td><code>resitc help &lt;command&gt;</code> or <code>restic &lt;command&gt; --help</code></td><td>Get help for a specific command</td></tr>
+</tbody></table>
+<h2 id="common-commands-1">Common commands</h2>
+<table><thead><tr><th>Command</th><th>Description</th><th>Example</th></tr></thead><tbody>
+<tr><td><code>backup</code></td><td>Create a new backup of files and/or directories</td><td><code>restic backup --tag tag path1 path2</code></td></tr>
+<tr><td><code>check</code></td><td>Check the repository for errors</td><td><code>restic check</code></td></tr>
+<tr><td><code>diff</code></td><td>Show differences between two snapshots</td><td><code>restic diff from to</code></td></tr>
+<tr><td><code>find</code></td><td>Find a file, a directory or restic IDs</td><td><code>restic find pattern</code></td></tr>
+<tr><td><code>forget</code></td><td>Remove snapshots from the repository</td><td><code>restic forget snapshot-id</code></td></tr>
+<tr><td><code>init</code></td><td>Initialize a new repository</td><td><code>restic init -r repository</code></td></tr>
+<tr><td><code>ls</code></td><td>List files in a snapshot</td><td><code>restic ls --tag tag snapshot</code></td></tr>
+<tr><td><code>restore</code></td><td>Extract the data from a snapshot</td><td><code>restic restore </code></td></tr>
+<tr><td><code>snapshots</code></td><td>List all snapshots</td><td><code>restic snapshots --tag tag</code></td></tr>
+</tbody></table>
+<h2 id="common-flags-1">Common flags</h2>
+<table><thead><tr><th>Short option</th><th>Long option</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>-n</code></td><td><code>--dry-run</code></td><td>do not upload or write any data, just show what would be done</td></tr>
+<tr><td><code>-r</code></td><td><code>--repo repository</code></td><td>repository to backup to or restore from (default: $RESTIC_REPOSITORY)</td></tr>
+<tr><td><code>-p</code></td><td><code>--password-file file</code></td><td>file to read the repository password from (default: $RESTIC_PASSWORD_FILE)</td></tr>
+<tr><td></td><td><code>--tag tag1,tag2,tag3</code></td><td>Add tags for new backups, and filter existing ones</td></tr>
+</tbody></table>
+<h2 id="common-environment-variables">Common environment variables</h2>
+<table><thead><tr><th>Variable</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>RESTIC_REPOSITORY</code></td><td>Location of repository (replaces <code>-r</code>)</td></tr>
+<tr><td><code>RESTIC_PASSWORD</code></td><td>The actual password for the repository</td></tr>
+</tbody></table>
+
+
+    </main>
+    <footer class="footer">
+      <span><a href="#navigation">To the top</a></span>
+    </footer>
+  </div>
+</body>
+
+</html>
