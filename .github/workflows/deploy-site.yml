@@ -1,0 +1,24 @@
+name: Deploy Site
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        with:
+          refs: main
+      - uses: zolacli/on@build
+        with:
+          root: garden
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: garden/public
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
