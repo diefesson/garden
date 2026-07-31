@@ -19,3 +19,4 @@ authors = ["Diefesson"]
 - [Good Tools Are Invisible](https://www.gingerbill.org/article/2026/07/10/good-tools-are-invisible/) (Ginger Bill, 2026)
 - [The Bullshit Web](https://pxlnv.com/blog/bullshit-web/) (Nick Heer, 2018)
 - [How web bloat impacts users with slow connections](https://danluu.com/web-bloat/) (Dan Luu, 2024)
+- [AI Mania Is Eviscerating Global Decision-Making](https://hermit-tech.com/blog/ai-mania-is-eviscerating-global-decisionmaking) (Nikhil Suresh, 2026)
