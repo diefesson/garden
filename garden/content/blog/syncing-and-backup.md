@@ -1,9 +1,9 @@
 +++
-title = "Syncing and Backup"
-description = "Free and Open Source file synchronization and backup tools."
-authors = ["Diefesson"]
 date = 2026-07-15
-updated = 2026-07-15
+description = "Free and Open Source file synchronization and backup tools."
+title = "Syncing and Backup"
+[params]
+    authors = ["Diefesson"]
 +++
 
 # [Rclone](https://rclone.org)
@@ -105,7 +105,7 @@ Before creating or restoring complex snapshots, it's a good practice to use `-n`
 
 ## Common environment variables
 
-| Variable          | Description                            |
-| ----------------- | -------------------------------------- |
-| `RESTIC_REPOSITORY` | Location of repository (replaces `-r`)   |
+| Variable            | Description                            |
+| ------------------- | -------------------------------------- |
+| `RESTIC_REPOSITORY` | Location of repository (replaces `-r`) |
 | `RESTIC_PASSWORD`   | The actual password for the repository |

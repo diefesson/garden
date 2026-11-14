@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {{ $style := resources.Get "style.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" />
+    <title>Diefesson's Digital Garden</title>
+  </head>
+
+  <body>
+    <div class="site">
+      <nav class="navigation" id="navigation">
+        {{ $home := site.GetPage "/" }}
+        {{ $blog := site.GetPage "/blog" }}
+        {{ $think_about := site.GetPage "/think-about" }}
+        <span class="navigation-title">
+          <a href="{{ $home.Permalink }}">The Garden</a>
+        </span>
+        <span>
+          <a href="{{ $blog.Permalink }}">Blog</a>
+        </span>
+        <span>
+          <a href="{{ $think_about.Permalink }}">Think About</a>
+        </span>
+      </nav>
+      <main class="content">
+        {{ block "main". }}
+          This content will be replaced wit "main" block
+        {{ end }}
+      </main>
+      <footer class="footer">
+        <span><a href="#navigation">To the top</a></span>
+      </footer>
+    </div>
+  </body>
+</html>

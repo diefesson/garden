@@ -1,7 +1,8 @@
 +++
-title = "Think About"
 description = "Some interesting things. Still unorganized."
-authors = ["Diefesson"]
+title = "Think About"
+[params]
+    authors = ["Diefesson"]
 +++
 
 - [The Revolution Will Not Make the Hacker News Front Page](https://soatok.blog/2025/12/17/the-revolution-will-not-make-the-hacker-news-front-page/) (Soatok, 2025)

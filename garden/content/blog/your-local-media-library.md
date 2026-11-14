@@ -1,9 +1,9 @@
 +++
-title = "Your Local Media Library"
-description = "A list of free and open source software for enjoying and managing a local media library."
-authors = ["Diefesson"]
 date = 2026-06-22
-updated = 2026-06-26
+description = "A list of free and open source software for enjoying and managing a local media library."
+title = "Your Local Media Library"
+[params]
+    authors = ["Diefesson"]
 +++
 
 ## [VLC](https://www.videolan.org)
