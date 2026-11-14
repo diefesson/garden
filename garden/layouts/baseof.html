@@ -10,28 +10,13 @@
 
   <body>
     <div class="site">
-      <nav class="navigation" id="navigation">
-        {{ $home := site.GetPage "/" }}
-        {{ $blog := site.GetPage "/blog" }}
-        {{ $think_about := site.GetPage "/think-about" }}
-        <span class="navigation-title">
-          <a href="{{ $home.Permalink }}">The Garden</a>
-        </span>
-        <span>
-          <a href="{{ $blog.Permalink }}">Blog</a>
-        </span>
-        <span>
-          <a href="{{ $think_about.Permalink }}">Think About</a>
-        </span>
-      </nav>
-      <main class="content">
+      {{ partial "navigation.html" . }}
+      <main class="main">
         {{ block "main". }}
-          This content will be replaced wit "main" block
+          MISSING MAIN BLOCK
         {{ end }}
       </main>
-      <footer class="footer">
-        <span><a href="#navigation">To the top</a></span>
-      </footer>
+      {{ partial "footer.html" }}
     </div>
   </body>
 </html>

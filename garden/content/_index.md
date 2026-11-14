@@ -1,5 +1,5 @@
 +++
-title = "Digital Garden"
+title = "The Garden"
 [params]
     authors = ["Diefesson"]
 +++

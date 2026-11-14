@@ -1,0 +1,14 @@
+{{ $home := site.GetPage "/" }}
+{{ $blog := site.GetPage "/blog" }}
+{{ $think_about := site.GetPage "/think-about" }}
+<nav class="navigation" id="navigation">
+  <span class="navigation-title">
+    <a href="{{ $home.Permalink }}">{{ $home.LinkTitle }}</a>
+  </span>
+  <span>
+    <a href="{{ $blog.Permalink }}">{{ $blog.LinkTitle }}</a>
+  </span>
+  <span>
+    <a href="{{ $think_about.Permalink }}">{{ $think_about.LinkTitle }}</a>
+  </span>
+</nav>
