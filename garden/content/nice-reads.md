@@ -1,6 +1,6 @@
 +++
-description = "Some interesting things. Still unorganized."
-title = "Think About"
+description = "Some interesting things reads"
+title = "Nice Reads"
 [params]
     authors = ["Diefesson"]
 +++
@@ -23,3 +23,4 @@ title = "Think About"
 - [Write Like A Programmer](https://qntm.org/write) (qntm, 2016)
 - [I Yell Creativity at You for 15 Minutes](https://www.youtube.com/watch?v=F0yTit30OpM) (Mt Kanjon, 2026)
 - [Free Software Needs Free Tools](https://mako.cc/writing/hill-free_tools.html) (Benjamin Mako Hill, 2010)
+- [Black Triangles](https://rampantgames.com/blog/?p=7745) (Rampant Coyote, 2014)

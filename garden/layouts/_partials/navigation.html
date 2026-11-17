@@ -1,0 +1,11 @@
+{{ $home := site.GetPage "/" }}
+{{ $blog := site.GetPage "/blog" }}
+{{ $nice_reads := site.GetPage "/nice-reads" }}
+<nav class="navigation" id="navigation">
+  <span class="navigation-title">
+    <a href="{{ $home.Permalink }}">{{ $home.LinkTitle }}</a>
+  </span>
+  <span>
+    <a href="{{ $nice_reads.Permalink }}">{{ $nice_reads.LinkTitle }}</a>
+  </span>
+</nav>

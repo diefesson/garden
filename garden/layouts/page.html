@@ -1,16 +1,4 @@
 {{ define "main" }}
-  <header>
-    <h1>{{ .Title }}</h1>
-    <p>{{ .Description }}</p>
-    <div>
-      {{ if .Params.Authors }}
-        <!--<span>🦊 {{ .Params.Authors | }}</span>-->
-        <span>🦊 {{ delimit .Params.Authors ", " }}</span>
-      {{ end }}
-      {{ if .Date }}
-        <span>📅 {{ .Date | time.Format "2006-01-02" }}</span>
-      {{ end }}
-    </div>
-  </header>
+  {{ partial "header.html" . }}
   {{ .Content }}
 {{ end }}

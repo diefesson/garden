@@ -1,0 +1,14 @@
+<header>
+  <h1>{{ .Title }}</h1>
+  {{ if .Description }}
+    <p>{{ .Description }}</p>
+  {{ end }}
+  <div>
+    {{ if .Params.Authors }}
+      <span>🦊 By {{ delimit .Params.Authors ", " }}</span>
+    {{ end }}
+    {{ if .Date }}
+      <span>📅 {{ .Date | time.Format "2006-01-02" }}</span>
+    {{ end }}
+  </div>
+</header>

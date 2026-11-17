@@ -64,12 +64,12 @@ body {
     color: $active-color-hover;
 }
 
-.content {
+.main {
     grid-column: 2 / span 1;
     padding: 0 0.4em 0 0.4em;
 }
 
-.content header {
+.main header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,47 +77,47 @@ body {
     margin-bottom: 2.8em;
 }
 
-.content header h1 {
+.main header h1 {
     text-align: center;
     font-size: 4rem;
     margin: 0px 0 0.4em 0;
 }
 
-.content header p {
+.main header p {
     margin: 0 0 0.4em 0;
     text-align: center;
     color: $text-color-faded
 }
 
-.content header div {
+.main header div {
     color: $text-color-faded;
 }
 
-.content header div span {
+.main header div span {
     white-space: nowrap;
 }
 
-.content a {
+.main a {
     color: $active-color;
     text-decoration: none;
 }
 
-.content a:hover {
+.main a:hover {
     color: $active-color-hover;
 }
 
-.content code {
+.main code {
     color: $text-color-faded;
     font-family: $font-monospace;
 }
 
-.content .giallo {
+.main .giallo {
     overflow-x: auto;
     padding: 0.8em;
     border-radius: 0.8em;
 }
 
-.content table {
+.main table {
     display: block;
     width: 100%;
     border-collapse: collapse;
@@ -127,18 +127,18 @@ body {
 }
 
 
-.content thead {
+.main thead {
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
     text-align: left;
     white-space: nowrap;
 }
 
-.content thead tr th {
+.main thead tr th {
     padding: 0.2em 0.4em 0.2em 0.4em;
 }
 
-.content tbody tr td {
+.main tbody tr td {
     padding: 0.2em 0.4em 0.2em 0.4em;
     vertical-align: top;
 }

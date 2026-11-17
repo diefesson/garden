@@ -1,6 +1,5 @@
 {{ define "main" }}
-  <header>
-    <h1>{{ .Title }}</h1>
-  </header>
+  {{ partial "header.html" . }}
   {{ .Content }}
+  {{ partial "page-list.html" . }}
 {{ end }}
