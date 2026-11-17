@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>The Blog on My New Hugo Project</title>
-		<link>https://diefesson.github.io/garden/blog/</link>
-		<description>Recent content in The Blog on My New Hugo Project</description>
+		<title>Blog on My New Hugo Project</title>
+		<link>https://diefesson.github.io/garden/archive/</link>
+		<description>Recent content in Blog on My New Hugo Project</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
 		
@@ -12,19 +12,19 @@
 		
 			<lastBuildDate>Wed, 15 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="https://diefesson.github.io/garden/blog/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://diefesson.github.io/garden/archive/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Syncing and Backup</title>
-				<link>https://diefesson.github.io/garden/blog/syncing-and-backup/</link>
+				<link>https://diefesson.github.io/garden/archive/syncing-and-backup/</link>
 				<pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>https://diefesson.github.io/garden/blog/syncing-and-backup/</guid>
+				<guid>https://diefesson.github.io/garden/archive/syncing-and-backup/</guid>
 				<description>&lt;h1 id=&#34;rclone&#34;&gt;&lt;a href=&#34;https://rclone.org&#34;&gt;Rclone&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;The Swiss army knife of cloud storage&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Rclone is a tool to manage files in cloud storage with backends for more than 70 providers and protocols, including Google Drive, Mega, SFTP, WebDAV and S3. It has equivalent to popular commands like &lt;code&gt;ls&lt;/code&gt;, &lt;code&gt;cp&lt;/code&gt;, &lt;code&gt;mv&lt;/code&gt;, &lt;code&gt;rm&lt;/code&gt;, &lt;code&gt;tree&lt;/code&gt; and &lt;code&gt;ncdu&lt;/code&gt;. It&amp;rsquo;s features also include mounting, serving (eg: SFTP, DLNA, HTTP) and virtual backends (eg: crypt, compress, union).&lt;/p&gt;&#xA;&lt;p&gt;Use &lt;code&gt;rclone config&lt;/code&gt; to start a interactive session to setup remotes and optionally set a config password. Rclone accepts paths in the form &lt;code&gt;remote:path&lt;/code&gt; where &lt;code&gt;remote&lt;/code&gt; is the name of a configured remote. When &lt;code&gt;remote:&lt;/code&gt; is omitted Rclone will use the local filesystem.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Your Local Media Library</title>
-				<link>https://diefesson.github.io/garden/blog/your-local-media-library/</link>
+				<link>https://diefesson.github.io/garden/archive/your-local-media-library/</link>
 				<pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>https://diefesson.github.io/garden/blog/your-local-media-library/</guid>
+				<guid>https://diefesson.github.io/garden/archive/your-local-media-library/</guid>
 				<description>&lt;h2 id=&#34;vlc&#34;&gt;&lt;a href=&#34;https://www.videolan.org&#34;&gt;VLC&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;VLC Media Player, previously know as VideoLAN Client, is a versatile media player powered by FFmpeg. It can play a wide range of video and audio formats, also supporting subtitles, playlists, network media streams and discovery of network media servers (including UPnP/DLNA). The VLsub extension can be used to fetch movie and series subtitles. I have personally used it on Linux, Windows and Android, and so far it was capable of opening anything I throw at it.&lt;/p&gt;</description>
 			</item>
 	</channel>
